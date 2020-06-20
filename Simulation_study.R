@@ -295,3 +295,32 @@ return(list("e.arr"=e.arr,"mse.arr"=mse.arr,"bias.arr"=bias.arr,
 "arr.pi0.est.boot.2"=arr.pi0.est.boot.2,"arr.pi0.est.lang.2"=arr.pi0.est.lang.2,"arr.cheng"=arr.cheng))
 }
 ######################################################################################################################################################
+
+## USING THE simul.e.pi0() function to reproduce the results:
+
+# A typical example:
+obj=simul.e.pi0(1000,0.5,25,0,0.5,0.5,0)# Here simulation size N=1000, pi0=0.5, n=25, support of the uniform distribution from which values of 
+# mu under alternative are generated= (0,0.5): 50% and (-0.5,0): 50%, rho=0.
+
+#obj returns 8 lists:
+
+# 1st one:
+
+obj$e.arr
+# This provides values needed for Figure 1 only for a fixed value of pi0. This may be repeated for all values of pi0 to obtain a single graph
+# in Figure 1 and then hanging other arguements we can do the same.
+
+obj$mse.arr
+# Same as above for Figure 3.
+
+obj$bias.arr
+# Same as above for Figure 2.
+
+#Other return from simul.e.pi0 have been used to obtain Figure 4.
+
+#########################################################################################################################################
+
+
+
+
+
